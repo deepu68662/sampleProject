@@ -1,0 +1,55 @@
+
+
+  @if(isLoader){
+    <div class="spinner-grow text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-secondary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-danger" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-warning" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-info" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-light" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-dark" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  }
+  
+@else{
+  <table class="table table-striped">
+
+    <thead class="thead-dark">
+      <tr>
+        <td>EmpName</td>
+        <td>EmpId</td>
+        <td>EmpCode</td>
+        <td>EmpEmailId</td>
+        <td>EmpDesignation</td>
+        <td>Role</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of allEmployees">
+       <td>{{emp.empName}}</td>
+       <td>{{emp.empId}}</td>
+       <td>{{emp.empCode}}</td>
+       <td>{{emp.empEmailId}}</td>
+       <td>{{emp.empDesignation}}</td>
+       <td>{{emp.role}}</td>
+      </tr>
+    </tbody>
+  
+    </table>
+}
